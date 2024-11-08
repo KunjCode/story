@@ -92,3 +92,15 @@ body{
     gap: 25px;
 }
 
+.guide{
+    display: none;
+}
+
+.char{
+    display: flex;
+    /* width: 100%; */
+}
+
+/* .guide{
+    width: 300px;
+} */

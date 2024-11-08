@@ -48,11 +48,55 @@ function msg1(){
     
     
     
+    
+    document.getElementById('Guide').style.display = "none";
+    
+    
     document.getElementById('mainmsg').style.display = "none";
     document.getElementById('tip').innerText = "Click Me";
+    
+    
     document.getElementById('Boy').addEventListener("click", () => {
         document.getElementById('mainmsg').style.display = "flex";
         document.getElementById('mainmsg').innerText = "wow";
+
+        document.getElementById('Guide').parentElement.style.display = "flex";
+        // document.getElementById('Guide').parentElement.style.width = "100%";
+        // document.getElementById('Guide').parentElement.style.hight = "10vh";
+        
+        document.getElementById('Guide').style.width = "300px";
+        document.getElementById('Guide').style.display = "flex";
+        // document.getElementById('Guide').style.left = "40%";
+        document.getElementById('Guide').style.left = "80%";
+        document.getElementById('Guide').style.bottom = "10%";
+        document.getElementById('Guide').style.position = "absolute";
+
+        document.getElementById('Boy').addEventListener("click", () =>{
+            var elem = document.getElementById('Guide');
+            var poe = 80;
+            var anim = setInterval(animate, 2000);
+
+            function animate(){
+                for(poe = 80; poe == 54; poe--){
+                    elem.style.top = poe + "%";
+                    elem.style.left = poe + "%";
+                }
+                // if(poe == 52){
+                //     clearInterval(anim);
+                // }else{
+                //     poe--;
+                //     
+                // }
+            }
+
+        });
+
+                
+        // document.getElementById('Boy').addEventListener("click", () => {
+
+
+
+        // });
         
     });
     
