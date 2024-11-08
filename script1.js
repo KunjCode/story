@@ -30,21 +30,21 @@ function msg1(){
     
 
     
-    document.getElementById('s1').style.backgroundColor = "red"; 
+    // document.getElementById('s1').style.backgroundColor = "red"; 
     
-    document.getElementById('s1').style.width = "30vw"; 
-    document.getElementById('s1').style.hight = "30vw";
-    document.getElementById('s1').style.margin = "30px";
-    document.getElementById('s1').style.border = "2px solid white";
-    document.getElementById('s1').style.transition = "all 1s ease-in-out";
+    // document.getElementById('s1').style.width = "30vw"; 
+    // document.getElementById('s1').style.hight = "30vw";
+    // document.getElementById('s1').style.margin = "30px";
+    // document.getElementById('s1').style.border = "2px solid white";
+    // document.getElementById('s1').style.transition = "all 1s ease-in-out";
     
-    document.getElementById('s2').style.backgroundColor = "green";
+    // document.getElementById('s2').style.backgroundColor = "green";
     
-    document.getElementById('s2').style.width = "30vw";
-    document.getElementById('s2').style.hight = "30vw";
-    document.getElementById('s2').style.margin = "30px";
-    document.getElementById('s2').style.border = "2px solid white";
-    document.getElementById('s2').style.transition = "all 1s ease-in-out";
+    // document.getElementById('s2').style.width = "30vw";
+    // document.getElementById('s2').style.hight = "30vw";
+    // document.getElementById('s2').style.margin = "30px";
+    // document.getElementById('s2').style.border = "2px solid white";
+    // document.getElementById('s2').style.transition = "all 1s ease-in-out";
     
     
     
