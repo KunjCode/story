@@ -94,6 +94,7 @@ body{
 
 .guide{
     display: none;
+    filter: drop-shadow(8px 8px 6px rgba(85, 85, 85, 0.616));
 }
 
 .char{
