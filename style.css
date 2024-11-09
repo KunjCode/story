@@ -102,6 +102,6 @@ body{
     /* width: 100%; */
 }
 
-/* .guide{
-    width: 300px;
-} */
+.coins{
+    display: none;
+}

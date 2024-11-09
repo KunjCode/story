@@ -1,4 +1,6 @@
 function msg1(){
+    // Declaration
+    const f1 = document.getElementById('f1');
     
     document.getElementById('mainmsg').style.textAlign = "center";
     document.getElementById('mainmsg').style.minHeight = "12vh";
@@ -91,10 +93,46 @@ function msg1(){
             
             
             Guide.addEventListener("click", () => {
-                document.getElementById('tip1').innerHTML = "We have to go at this side."
-                document.getElementById('tip').innerHTML = "Ohh ok"
+                document.getElementById('tip1').innerHTML = "If you want I help you then you have to give me gold Coins..."
+                document.getElementById('tip').innerHTML = "What can I do...?"
                 document.getElementById('Boy1').style.display = "none";
                 document.getElementById('Boy2').style.display = "absolute";
+
+
+                //Selection between accept or reject
+
+                f1.style.width = "240px";
+                f1.style.height = "25px";
+                f1.innerHTML = "Accept";
+                f1.style.textAlign = "center";
+                f1.style.fontWeight = "bold";
+                f1.style.padding = "7px 2px 7px 2px";
+                f1.style.borderRadius = "6px";
+                f1.style.filter = "drop-shadow(0px 10px 8px rgba(175, 79, 0, 0.562))";
+                f1.style.top = "50%";
+                f1.style.left = "33%";
+                f1.style.content = " ";
+                f1.style.position = "absolute";
+                f1.style.backgroundColor= "rgb(255, 190, 152)";
+
+
+                f2.style.width = "240px";
+                f2.style.height = "25px";
+                f2.innerHTML = "Reject";
+                f2.style.textAlign = "center";
+                f2.style.fontWeight = "bold";
+                f2.style.padding = "7px 2px 7px 2px";
+                f2.style.borderRadius = "6px";
+                f2.style.filter = "drop-shadow(0px 10px 8px rgba(175, 79, 0, 0.562))";
+                f2.style.top = "60%";
+                f2.style.left = "33%";
+                f2.style.content = " ";
+                f2.style.position = "absolute";
+                f2.style.backgroundColor= "rgb(255, 190, 152)";
+
+
+                
+                
             });
             
        
