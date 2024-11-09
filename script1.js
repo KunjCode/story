@@ -1,6 +1,8 @@
 function msg1(){
     // Declaration
     const f1 = document.getElementById('f1');
+    const Coins = document.getElementById("Coins");
+
     
     document.getElementById('mainmsg').style.textAlign = "center";
     document.getElementById('mainmsg').style.minHeight = "12vh";
@@ -100,9 +102,10 @@ function msg1(){
 
 
                 //Selection between accept or reject
-
+                f1.style.display = "flex";
+                f1.style.justifyContent = "center";
                 f1.style.width = "240px";
-                f1.style.height = "25px";
+                f1.style.height = "35px";
                 f1.innerHTML = "Accept";
                 f1.style.textAlign = "center";
                 f1.style.fontWeight = "bold";
@@ -114,10 +117,12 @@ function msg1(){
                 f1.style.content = " ";
                 f1.style.position = "absolute";
                 f1.style.backgroundColor= "rgb(255, 190, 152)";
-
-
+                
+                
+                f2.style.display = "flex"
+                f2.style.justifyContent = "center";
                 f2.style.width = "240px";
-                f2.style.height = "25px";
+                f2.style.height = "35px";
                 f2.innerHTML = "Reject";
                 f2.style.textAlign = "center";
                 f2.style.fontWeight = "bold";
@@ -130,8 +135,16 @@ function msg1(){
                 f2.style.position = "absolute";
                 f2.style.backgroundColor= "rgb(255, 190, 152)";
 
-
                 
+                f1.addEventListener("click", () => {
+                    
+                    Coins.style.display = "flex";
+                    Coins.style.width = "25px";
+                    Coins.style.bottom = "0";
+                    
+
+                    
+                });
                 
             });
             
