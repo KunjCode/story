@@ -60,6 +60,8 @@ function msg1(){
         document.getElementById('Guide').style.position = "absolute";
         
         document.getElementById('tip').innerHTML = "Hello";
+
+
         document.getElementById('Boy1').addEventListener("click", () => {
             
             document.getElementById('tip').innerHTML = "Who are you?";
@@ -134,16 +136,77 @@ function msg1(){
                 f2.style.content = " ";
                 f2.style.position = "absolute";
                 f2.style.backgroundColor= "rgb(255, 190, 152)";
-
+                
                 
                 f1.addEventListener("click", () => {
                     
                     Coins.style.display = "flex";
-                    Coins.style.width = "25px";
-                    Coins.style.bottom = "0";
+                    Coins.style.position = "absolute";
+                    Coins.style.width = "70px";
+                    Coins.style.bottom = "20%";
+                    Coins.style.left = "52%";
+                    f2.style.display= "none";
                     
+                    document.getElementById('tip').innerHTML = "Okay... Let's Go";
 
+                    // Guide.removeEventListener("click", true);
                     
+                    document.getElementById('Boy2').addEventListener("click", () =>{
+                        
+                        document.getElementById('Boy2').style.display = "none";
+                        document.getElementById('Boy3').style.display = "absolute";
+                        
+                        
+                        let id = null; 
+                        let posL = 52;
+                        clearInterval(id);
+                        id = setInterval(frame, 50);
+                        function frame() {
+                            if (posL == 61) {
+                                clearInterval(id);
+                                Coins.style.display = "none";
+                                document.getElementById('tip1').style.display = "none";
+                            } else {
+                                posL++; 
+                                Coins.style.left = posL + "%"; 
+
+                            }
+                        }
+                    });
+                });
+                
+                f2.addEventListener("click", () => {
+                    
+                    document.getElementById('tip').innerHTML = "No, I will go Alone";
+                    f1.style.display= "none";
+                    
+                    document.getElementById('Boy2').addEventListener("click", () =>{
+                    
+                        document.getElementById('Boy2').style.display = "none";
+                        document.getElementById('Boy3').style.display = "absolute";
+                        
+                        
+                        let id = null;
+                        const Guide = document.getElementById("Guide");   
+                        let posL = 70;
+                        let posB = 0;
+                        clearInterval(id);
+                        id = setInterval(frame, 50);
+                        function frame() {
+                            if (posL == 84 || posB == 20) {
+                                clearInterval(id);
+                                Guide.style.display = "none";
+                                Guide.style.transition= "width -2s, height -2s, transform -2s";
+                            } else {
+                                posL++; 
+                                posB++; 
+                                Guide.style.bottom = posB + "%"; 
+                                Guide.style.left = posL + "%"; 
+                            }
+                        }
+
+                    });
+
                 });
                 
             });
