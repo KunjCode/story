@@ -59,6 +59,7 @@ function msg1(){
     document.getElementById('Boy').addEventListener("click", () => {
         document.getElementById('mainmsg').style.display = "flex";
         document.getElementById('mainmsg').innerText = "wow";
+        document.getElementById('tip1').style.display = "none";
         document.getElementById('Boy').style.display = "none";
         document.getElementById('Boy1').style.display = "absolute";
         
@@ -72,64 +73,51 @@ function msg1(){
         document.getElementById('Guide').style.left = "80%";
         document.getElementById('Guide').style.bottom = "20%";
         document.getElementById('Guide').style.position = "absolute";
-
+        
         document.getElementById('tip').innerHTML = "Hello";
         document.getElementById('Boy1').addEventListener("click", () => {
             
-            document.getElementById('tip').innerHTML = "WHat is this?";
+            document.getElementById('tip').innerHTML = "Who are you?";
             
-            var elem = document.getElementById('Guide');
-            var poeL = 80;
-            var poeB = 20;
-            var anim = setInterval(animate, 5000);
-        
-            function animate(){
-                // for(poeL && poeB; poeL == 54 && poeB == 5; poeL-- && poeB--){
-                //     elem.style.top = poe + "%";
-                //     elem.style.left = poe + "%";
-                // }
-                if(poeL == 52 && poeB == 5){
-                    clearInterval(anim);
-                }else{
-                    poeL--;
-                    poeB--;
-                    elem.style.top = poe + "%";
-                    elem.style.left = poe + "%";
+            document.getElementById('Guide').style.left = "55%";
+            document.getElementById('Guide').style.bottom = "0";
+            document.getElementById('Guide').style.position = "absolute"; 
+            
+            document.getElementById('Guide').parentElement.style.display = "block"; 
+            
+
+            let id = null;
+            const Guide = document.getElementById("Guide");   
+            let posL = 80;
+            let posB = 20;
+            clearInterval(id);
+            id = setInterval(frame, 50);
+            function frame() {
+                if (posL == 0 || posB == 0) {
+                    clearInterval(id);
+                } else {
+                    posL--; 
+                    posB--; 
+                    Guide.style.bottom = posB + "%"; 
+                    Guide.style.left = posL + "%"; 
                 }
             }
+            
+            document.getElementById('tip1').innerHTML = "My name is bruham."
+            document.getElementById('tip1').style.display = "block";
+            document.getElementById('tip1').style.bottom = "48%";
+            document.getElementById('tip1').style.left = "63%";
+            
+            
+            Guide.addEventListener("click", () => {
+                document.getElementById('tip1').innerHTML = "We have to go at this side."
+                document.getElementById('tip').innerHTML = "Ohh ok"
+                document.getElementById('Boy1').style.display = "none";
+                document.getElementById('Boy2').style.display = "absolute";
+            });
+            
+       
         });
-
-
-        // document.getElementById('Boy').addEventListener("click", () =>{
-        //     var elem = document.getElementById('Guide');
-        //     var poeL = 80;
-        //     var poeB = 20;
-        //     var anim = setInterval(animate, 5000);
-
-        //     function animate(){
-        //         // for(poeL && poeB; poeL == 54 && poeB == 5; poeL-- && poeB--){
-        //         //     elem.style.top = poe + "%";
-        //         //     elem.style.left = poe + "%";
-        //         // }
-        //         if(poeL == 52 && poeB == 5){
-        //             clearInterval(anim);
-        //         }else{
-        //             poeL--;
-        //             poeB--;
-        //             elem.style.top = poe + "%";
-        //             elem.style.left = poe + "%";
-        //         }
-        //     }
-
-        // });
-
-        
-                
-        // document.getElementById('Boy').addEventListener("click", () => {
-
-
-
-        // });
         
     });
     
