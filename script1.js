@@ -2,6 +2,10 @@ function msg1(){
     // Declaration
     const f1 = document.getElementById('f1');
     const Coins = document.getElementById("Coins");
+    const Guide1 = document.getElementById('Guide1');
+
+
+    
 
     
     document.getElementById('mainmsg').style.textAlign = "center";
@@ -50,6 +54,15 @@ function msg1(){
         document.getElementById('Boy1').style.display = "absolute";
         
         document.getElementById('Guide').parentElement.style.display = "flex";
+
+        // document.getElementsByClassNamee('guide').style.left = "55%";
+        // document.getElementsByClassNamee('guide').style.bottom = "0";
+        // document.getElementsByClassNamee('guide').style.position = "absolute"; 
+    
+        // document.getElementsByClassNamee('guide').parentElement.style.display = "block"; 
+        // document.getElementsByClassNamee('guide').style.display = "flex";
+        // document.getElementsByClassNamee('guide').style.position = "absolute";
+        // document..style.width = "300px";
 
         
         document.getElementById('Guide').style.width = "300px";
@@ -139,6 +152,8 @@ function msg1(){
                 
                 
                 f1.addEventListener("click", () => {
+
+
                     
                     Coins.style.display = "flex";
                     Coins.style.position = "absolute";
@@ -148,13 +163,24 @@ function msg1(){
                     f2.style.display= "none";
                     
                     document.getElementById('tip').innerHTML = "Okay... Let's Go";
-
-                    // Guide.removeEventListener("click", true);
                     
                     document.getElementById('Boy2').addEventListener("click", () =>{
                         
                         document.getElementById('Boy2').style.display = "none";
                         document.getElementById('Boy3').style.display = "absolute";
+                        
+                        
+            
+                        Guide1.style.left = "60%";
+                        Guide1.style.bottom = "0";
+                        Guide1.style.position = "absolute"; 
+                        Guide1.style.width = "300px";
+                        Guide1.style.display = "flex";                        
+                        Guide1.parentElement.style.display = "block"; 
+
+                        document.getElementById('Guide').style.display = "none";
+                        Guide1.style.display = "absolute";          
+
                         
                         
                         let id = null; 
@@ -165,7 +191,8 @@ function msg1(){
                             if (posL == 61) {
                                 clearInterval(id);
                                 Coins.style.display = "none";
-                                document.getElementById('tip1').style.display = "none";
+                                document.getElementById('tip1').innerHTML = "We have to go this side...";
+                                f1.style.display = "none";
                             } else {
                                 posL++; 
                                 Coins.style.left = posL + "%"; 
@@ -185,6 +212,7 @@ function msg1(){
                         document.getElementById('Boy2').style.display = "none";
                         document.getElementById('Boy3').style.display = "absolute";
                         
+                        f2.style.display = "none";
                         
                         let id = null;
                         const Guide = document.getElementById("Guide");   
@@ -196,12 +224,12 @@ function msg1(){
                             if (posL == 84 || posB == 20) {
                                 clearInterval(id);
                                 Guide.style.display = "none";
-                                Guide.style.transition= "width -2s, height -2s, transform -2s";
                             } else {
                                 posL++; 
                                 posB++; 
                                 Guide.style.bottom = posB + "%"; 
                                 Guide.style.left = posL + "%"; 
+                                Guide.style.transition= "width -2s, height -2s, transform -2s";
                             }
                         }
 
