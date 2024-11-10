@@ -4,8 +4,7 @@ function msg1(){
     const Coins = document.getElementById("Coins");
     const Guide1 = document.getElementById('Guide1');
 
-
-
+    
     
     
     document.getElementById('mainmsg').style.textAlign = "center";
@@ -128,7 +127,7 @@ function msg1(){
                 f1.style.borderRadius = "6px";
                 f1.style.filter = "drop-shadow(0px 10px 8px rgba(175, 79, 0, 0.562))";
                 f1.style.top = "50%";
-                f1.style.left = "33%";
+                f1.style.right = "60%";
                 f1.style.content = " ";
                 f1.style.position = "absolute";
                 f1.style.backgroundColor= "rgb(255, 190, 152)";
@@ -145,7 +144,7 @@ function msg1(){
                 f2.style.borderRadius = "6px";
                 f2.style.filter = "drop-shadow(0px 10px 8px rgba(175, 79, 0, 0.562))";
                 f2.style.top = "60%";
-                f2.style.left = "33%";
+                f2.style.right = "60%";
                 f2.style.content = " ";
                 f2.style.position = "absolute";
                 f2.style.backgroundColor= "rgb(255, 190, 152)";
@@ -168,13 +167,14 @@ function msg1(){
                         
                         document.getElementById('Boy2').style.display = "none";
                         document.getElementById('Boy3').style.display = "absolute";
+                        document.getElementById('Boy4').style.display = "none";
                         
                         
             
                         Guide1.style.left = "60%";
                         Guide1.style.bottom = "0";
                         Guide1.style.position = "absolute"; 
-                        Guide1.style.width = "300px";
+                        Guide1.style.width = "20vw";
                         Guide1.style.display = "flex";                        
                         Guide1.parentElement.style.display = "block"; 
 
@@ -193,6 +193,9 @@ function msg1(){
                                 Coins.style.display = "none";
                                 document.getElementById('tip1').innerHTML = "We have to go this side...";
                                 f1.style.display = "none";
+
+                                
+
 
                                 goToTemple();
                             } else {
@@ -263,9 +266,7 @@ function msg1(){
                 if (posLG == 50 || posBG == 10 || posLB == 49 || posBB == 10) {
                     clearInterval(id);
                     // Guide1.style.display = "none";
-                    // document.getElementById('Boy4').style.display = "none";
-
-                    // document.getElementById('Boy3').style.display = "none";
+                    // 
                     
                     
                     atTemple();
@@ -293,11 +294,20 @@ function msg1(){
     }
     
     function atTemple(){
+        
         document.getElementById('mainmsg').innerText = "next"; 
         document.getElementById('b1').style.backgroundImage = "url('templeGreen.jpg')";
-
+        
         document.getElementById('tip').innerHTML = "What Now?";
         document.getElementById('tip1').innerHTML = "Now It's your way, I have to go...";
+
+        document.getElementById('Boy3').style.display = "none";
+        document.getElementById('Boy4').style.display = "absolute";
+
+        document.getElementById('Boy4').style.width = "10vw"
+        document.getElementById('Boy4').style.left = "46%"
+
+
 
         // let id = null;
         // // const Guide = document.getElementById("Guide");   
