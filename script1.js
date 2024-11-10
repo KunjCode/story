@@ -5,8 +5,8 @@ function msg1(){
     const Guide1 = document.getElementById('Guide1');
 
 
-    
 
+    
     
     document.getElementById('mainmsg').style.textAlign = "center";
     document.getElementById('mainmsg').style.minHeight = "12vh";
@@ -247,8 +247,80 @@ function msg1(){
     });
 
     function goToTemple(){
-        document.getElementById('mainmsg').innerText = "next";
-        document.getElementById('b1').style.backgroundImage = "url('templeGreen.jpeg')";
+        
+        let id = null;  
+        let posLG = 60;
+        let posLB = 46;
+        let posBG = 0;
+        let posBB = 0;
+        let WB = 150;
+        let WG = 300;
+        clearInterval(id);
+        id = setInterval(frame, 50);
+        function frame() {
+            if(WG == 150 || WB == 140){
+
+                if (posLG == 50 || posBG == 10 || posLB == 49 || posBB == 10) {
+                    clearInterval(id);
+                    // Guide1.style.display = "none";
+                    // document.getElementById('Boy4').style.display = "none";
+
+                    // document.getElementById('Boy3').style.display = "none";
+                    
+                    
+                    atTemple();
+                } else {
+                    posLG--; 
+                    posLB++; 
+                    posBG++; 
+                    posBB++; 
+                    Guide1.style.bottom = posBG + "%"; 
+                    Guide1.style.left = posLG + "%"; 
+                    
+                    document.getElementById('Boy3').style.bottom = posBB + "%";
+                    document.getElementById('Boy3').style.left = posLB + "%";
+            
+
+                }
+            }else{
+                WG--;
+                WB--;
+                Guide1.style.width = WG + "px";
+                document.getElementById('Boy3').style.width = WB + "px";
+                
+            }
+        }
+    }
+    
+    function atTemple(){
+        document.getElementById('mainmsg').innerText = "next"; 
+        document.getElementById('b1').style.backgroundImage = "url('templeGreen.jpg')";
+
+        document.getElementById('tip').innerHTML = "What Now?";
+        document.getElementById('tip1').innerHTML = "Now It's your way, I have to go...";
+
+        // let id = null;
+        // // const Guide = document.getElementById("Guide");   
+        // let posL = 50;
+        // let posB = 10;
+        // clearInterval(id);
+        // id = setInterval(frame, 50);
+        // function frame() {
+        //     if (posL == 84 || posB == 20) {
+        //         clearInterval(id);
+        //         Guide.style.display = "none";
+        //     } else {
+        //         posL++; 
+        //         posB++; 
+        //         Guide1.style.bottom = posB + "%"; 
+        //         Guide1.style.left = posL + "%"; 
+        //         Guide1.style.transition= "width -2s, height -2s, transform -2s";
+        //     }
+        // }
+
+
+
+
     }
     
 }
