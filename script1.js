@@ -193,6 +193,8 @@ function msg1(){
                                 Coins.style.display = "none";
                                 document.getElementById('tip1').innerHTML = "We have to go this side...";
                                 f1.style.display = "none";
+
+                                goToTemple();
                             } else {
                                 posL++; 
                                 Coins.style.left = posL + "%"; 
@@ -243,6 +245,11 @@ function msg1(){
         });
         
     });
+
+    function goToTemple(){
+        document.getElementById('mainmsg').innerText = "next";
+        document.getElementById('b1').style.backgroundImage = "url('templeGreen.jpeg')";
+    }
     
 }
 
