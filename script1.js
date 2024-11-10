@@ -65,7 +65,7 @@ function msg1(){
         // document..style.width = "300px";
 
         
-        document.getElementById('Guide').style.width = "300px";
+        document.getElementById('Guide').style.width = "20vw";
         document.getElementById('Guide').style.display = "flex";
         
         document.getElementById('Guide').style.left = "80%";
@@ -105,7 +105,7 @@ function msg1(){
             
             document.getElementById('tip1').innerHTML = "My name is bruham."
             document.getElementById('tip1').style.display = "block";
-            document.getElementById('tip1').style.bottom = "48%";
+            document.getElementById('tip1').style.bottom = "62%";
             document.getElementById('tip1').style.left = "63%";
             
             
