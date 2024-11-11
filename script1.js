@@ -1,8 +1,12 @@
 function msg1(){
     // Declaration
     const f1 = document.getElementById('f1');
+    // const f2 = document.getElementById('f2');
+    const f11 = document.getElementById('f11');
+    const f12 = document.getElementById('f12');
     const Coins = document.getElementById("Coins");
     const Guide1 = document.getElementById('Guide1');
+    var Ghost1 = document.getElementById('Ghost1');
 
     document.getElementById('Boy1').style.display = "none";
     document.getElementById('Boy2').style.display = "none";
@@ -80,7 +84,7 @@ function msg1(){
 
 
         document.getElementById('Boy1').addEventListener("click", () => {
-            
+        
             document.getElementById('tip').innerHTML = "Who are you?";
             
             document.getElementById('Guide').style.left = "55%";
@@ -202,7 +206,7 @@ function msg1(){
                                 
 
 
-                                goToTemple();
+                                goToTempleGreen();
                             } else {
                                 posL++; 
                                 Coins.style.left = posL + "%"; 
@@ -231,9 +235,11 @@ function msg1(){
                         clearInterval(id);
                         id = setInterval(frame, 50);
                         function frame() {
-                            if (posL == 84 || posB == 20) {
+                            if (posL == 80 || posB == 20) {
                                 clearInterval(id);
                                 Guide.style.display = "none";
+
+                                goToTempleBlue();
                             } else {
                                 posL++; 
                                 posB++; 
@@ -254,7 +260,7 @@ function msg1(){
         
     });
 
-    function goToTemple(){
+    function goToTempleGreen(){
         
         let id = null;  
         let posLG = 60;
@@ -274,7 +280,7 @@ function msg1(){
                     // 
                     
                     
-                    atTemple();
+                    atTempleGreen();
                 } else {
                     posLG--; 
                     posLB++; 
@@ -298,13 +304,14 @@ function msg1(){
         }
     }
     
-    function atTemple(){
+    function atTempleGreen(){
         
         document.getElementById('mainmsg').innerText = "next"; 
         document.getElementById('b1').style.backgroundImage = "url('templeGreen.jpg')";
         
         document.getElementById('tip').innerHTML = "What Now?";
         document.getElementById('tip1').innerHTML = "Now It's your way, I have to go...";
+        document.getElementById('tip1').style.left = "60%";
 
         document.getElementById('Boy3').style.display = "none";
         document.getElementById('Boy4').style.display = "block";
@@ -333,9 +340,107 @@ function msg1(){
                 }
             }
         });
+    }
+
+
+    function goToTempleBlue(){
+        let id = null;  
+
+        let WB = 150;
+        clearInterval(id);
+        id = setInterval(frame, 50);
+        function frame() {
+            if(WB == 140){
+                clearInterval(id);
+
+                atTempleBlue();
+            }else{
+                WB--;
+                document.getElementById('Boy3').style.width = WB + "px";
+            }
+        }
+
+        function atTempleBlue(){
+
+            document.getElementById('b1').style.backgroundImage = "url('templeBlue.jpg')";
+
+            document.getElementById('tip').innerHTML = "Should I go inside?";
             
+            f11.innerHTML = "YES";
+            f11.style.display = "block";
+            f11.style.justifyContent = "center";
+            f11.style.width = "240px";
+            f11.style.height = "35px";
+            f11.style.textAlign = "center";
+            f11.style.fontWeight = "bold";
+            f11.style.padding = "7px 2px 7px 2px";
+            f11.style.borderRadius = "6px";
+            f11.style.filter = "drop-shadow(0px 10px 8px rgba(175, 79, 0, 0.562))";
+            f11.style.top = "50%";
+            f11.style.right = "60%";
+            f11.style.content = " ";
+            f11.style.position = "absolute";
+            f11.style.backgroundColor= "rgb(255, 190, 152)";
+
+            f12.innerHTML = "NO";
+            f12.style.display = "block";
+            f12.style.justifyContent = "center";
+            f12.style.width = "240px";
+            f12.style.height = "35px";
+            f12.style.textAlign = "center";
+            f12.style.fontWeight = "bold";
+            f12.style.padding = "7px 2px 7px 2px";
+            f12.style.borderRadius = "6px";
+            f12.style.filter = "drop-shadow(0px 10px 8px rgba(175, 79, 0, 0.562))";
+            f12.style.top = "60%";
+            f12.style.right = "60%";
+            f12.style.content = " ";
+            f12.style.position = "absolute";
+            f12.style.backgroundColor= "rgb(255, 190, 152)";
+            
+            document.getElementById('Boy3').style.display = "none";
+            document.getElementById('Boy4').style.display = "block";
+            
+            
+            f11.addEventListener("click", () => {
+                
+                document.getElementById('tip').innerHTML = "What Should I do Now...?";
 
 
+                f11.style.display = "none";
+                f12.style.display = "none";
+
+                document.getElementById('Boy4').addEventListener("click", () => {
+
+                    let id = null;   
+                    let posL = 60;
+                    clearInterval(id);
+                    id = setInterval(frame, 50);
+                    function frame() {
+                        if (posL == 80) {
+                            clearInterval(id);
+                            Guide1.style.display = "none";
+                        } else {
+                            posL++; 
+                            Guide1.style.left = posL + "%"; 
+                            Guide1.style.transition= "width -2s, height -2s, transform -2s";
+                        }
+                    }
+                
+                
+                })
+
+
+
+                Ghost1.style.display = "block";
+                Ghost1.style.width = "10vw";
+                Ghost1.style.position = "absolute";
+                Ghost1.style.left = "20%";
+                Ghost1.style.top = "25%";
+                
+                
+            });
+        }
 
     }
     

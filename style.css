@@ -109,3 +109,11 @@ body{
 #f1, #f2{
     display: none;
 }
+
+.ghost{
+    display: none;
+}
+
+#f11, #f12{
+    display: none;
+}
