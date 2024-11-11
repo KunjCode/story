@@ -4,6 +4,11 @@ function msg1(){
     const Coins = document.getElementById("Coins");
     const Guide1 = document.getElementById('Guide1');
 
+    document.getElementById('Boy1').style.display = "none";
+    document.getElementById('Boy2').style.display = "none";
+    document.getElementById('Boy3').style.display = "none";
+    document.getElementById('Boy4').style.display = "none";
+
     
     
     
@@ -50,7 +55,7 @@ function msg1(){
         document.getElementById('mainmsg').innerText = "wow";
         document.getElementById('tip1').style.display = "none";
         document.getElementById('Boy').style.display = "none";
-        document.getElementById('Boy1').style.display = "absolute";
+        document.getElementById('Boy1').style.display = "block";
         
         document.getElementById('Guide').parentElement.style.display = "flex";
 
@@ -112,7 +117,7 @@ function msg1(){
                 document.getElementById('tip1').innerHTML = "If you want I help you then you have to give me gold Coins..."
                 document.getElementById('tip').innerHTML = "What can I do...?"
                 document.getElementById('Boy1').style.display = "none";
-                document.getElementById('Boy2').style.display = "absolute";
+                document.getElementById('Boy2').style.display = "block";
 
 
                 //Selection between accept or reject
@@ -166,7 +171,7 @@ function msg1(){
                     document.getElementById('Boy2').addEventListener("click", () =>{
                         
                         document.getElementById('Boy2').style.display = "none";
-                        document.getElementById('Boy3').style.display = "absolute";
+                        document.getElementById('Boy3').style.display = "block";
                         document.getElementById('Boy4').style.display = "none";
                         
                         
@@ -179,7 +184,7 @@ function msg1(){
                         Guide1.parentElement.style.display = "block"; 
 
                         document.getElementById('Guide').style.display = "none";
-                        Guide1.style.display = "absolute";          
+                        Guide1.style.display = "block";          
 
                         
                         
@@ -215,7 +220,7 @@ function msg1(){
                     document.getElementById('Boy2').addEventListener("click", () =>{
                     
                         document.getElementById('Boy2').style.display = "none";
-                        document.getElementById('Boy3').style.display = "absolute";
+                        document.getElementById('Boy3').style.display = "block";
                         
                         f2.style.display = "none";
                         
@@ -302,32 +307,33 @@ function msg1(){
         document.getElementById('tip1').innerHTML = "Now It's your way, I have to go...";
 
         document.getElementById('Boy3').style.display = "none";
-        document.getElementById('Boy4').style.display = "absolute";
+        document.getElementById('Boy4').style.display = "block";
 
         document.getElementById('Boy4').style.width = "10vw"
         document.getElementById('Boy4').style.left = "46%"
 
+        Guide1.addEventListener("click", () => {
 
-
-        // let id = null;
-        // // const Guide = document.getElementById("Guide");   
-        // let posL = 50;
-        // let posB = 10;
-        // clearInterval(id);
-        // id = setInterval(frame, 50);
-        // function frame() {
-        //     if (posL == 84 || posB == 20) {
-        //         clearInterval(id);
-        //         Guide.style.display = "none";
-        //     } else {
-        //         posL++; 
-        //         posB++; 
-        //         Guide1.style.bottom = posB + "%"; 
-        //         Guide1.style.left = posL + "%"; 
-        //         Guide1.style.transition= "width -2s, height -2s, transform -2s";
-        //     }
-        // }
-
+            
+            document.getElementById('tip').innerHTML = "Okey..."
+            
+            let id = null;
+            // const Guide = document.getElementById("Guide");   
+            let posL = 60;
+            clearInterval(id);
+            id = setInterval(frame, 50);
+            function frame() {
+                if (posL == 80) {
+                    clearInterval(id);
+                    Guide1.style.display = "none";
+                } else {
+                    posL++; 
+                    Guide1.style.left = posL + "%"; 
+                    Guide1.style.transition= "width -2s, height -2s, transform -2s";
+                }
+            }
+        });
+            
 
 
 
