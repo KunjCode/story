@@ -7,6 +7,9 @@ function msg1(){
     const Coins = document.getElementById("Coins");
     const Guide1 = document.getElementById('Guide1');
     var Ghost1 = document.getElementById('Ghost1');
+    var tip2 = document.getElementById('tip2');
+
+
 
     document.getElementById('Boy1').style.display = "none";
     document.getElementById('Boy2').style.display = "none";
@@ -404,42 +407,52 @@ function msg1(){
             
             f11.addEventListener("click", () => {
                 
-                document.getElementById('tip').innerHTML = "What Should I do Now...?";
-
-
+                
+                
                 f11.style.display = "none";
                 f12.style.display = "none";
-
+                
                 document.getElementById('Boy4').addEventListener("click", () => {
+                    
+                    document.getElementById('tip').innerHTML = "What Should I do Now...?";
+
+                    Ghost1.style.display = "block";
+                    Ghost1.style.width = "10vw";
+                    Ghost1.style.position = "absolute";
 
                     let id = null;   
-                    let posL = 60;
+                    let posL = 20;
+                    let posT = 25;
                     clearInterval(id);
                     id = setInterval(frame, 50);
                     function frame() {
-                        if (posL == 80) {
+                        if (posL == 30 || posT == 35) {
                             clearInterval(id);
-                            Guide1.style.display = "none";
+                            Ghost1.style.display = "block";
+
+                            withGhost1();
                         } else {
                             posL++; 
-                            Guide1.style.left = posL + "%"; 
-                            Guide1.style.transition= "width -2s, height -2s, transform -2s";
+                            posT++; 
+                            Ghost1.style.left = posL + "%"; 
+                            Ghost1.style.top = posT + "%"; 
+                            Ghost1.style.transition= "width -2s, height -2s, transform -2s";
                         }
                     }
                 
                 
-                })
-
-
-
-                Ghost1.style.display = "block";
-                Ghost1.style.width = "10vw";
-                Ghost1.style.position = "absolute";
-                Ghost1.style.left = "20%";
-                Ghost1.style.top = "25%";
-                
-                
+                })    
             });
+
+            function withGhost1(){
+                tip2.style.display = "block";
+                tip2.style.position = "absolute";
+                tip2.innerHTML = "I am Ghost1";
+                tip2.style.left = "31%";
+                tip2.style.top = "30%";
+            }
+
+
         }
 
     }
