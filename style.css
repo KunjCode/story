@@ -9,7 +9,7 @@ body{
     background-repeat: no-repeat;
 }
 
-.type{
+/* .type{
     font-family: monospace;
     color:#0000;
     background:
@@ -28,7 +28,7 @@ body{
   }
   @keyframes b{
     100% {background-position:0 -100%,0 0}
-  }
+  } */
 
 .frames{
     display: flex;
@@ -51,15 +51,20 @@ body{
 .mes{
     border: 5px solid black;
     box-shadow: 5px 0px 25px;
-    min-height: 15vh;
-    display: flex;
-    justify-content: center;
+    max-height: 15vh;
+    /* display: flex; */
+    /* justify-content: center; */
     width: 85vw;
     background-color:bisque;
     margin:auto;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 25px;
+    font-size: 16px;
+    overflow-y: scroll;
+    text-align: justify;
+    scrollbar-width: 1px;
+    scrollbar-track-color: transparent;
 }
 
 .msg{
