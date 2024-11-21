@@ -1,142 +1,145 @@
-body{
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: antiquewhite;
-    background: url("background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: antiquewhite;
+  background: url("background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .type {
-    padding: 15px;
-    font-size: 20px;
-    overflow-x: hidden;
-    color:#0000;
-    background:
-      linear-gradient(-90deg,#00dffc00 5px,#0000 0) 0 0,
-      linear-gradient(#000000 0 0) 0 0;
-    background-size:calc(var(--n)*1ch) 200%;
-    -webkit-background-clip:padding-box,text;
-    background-clip:padding-box,text;
-    background-repeat:no-repeat;
-    animation: 
-     b .7s infinite steps(1),   
-     t calc(var(--n)*.1s) steps(var(--n)) forwards;
+  padding: 15px;
+  font-size: 20px;
+  overflow-x: hidden;
+  color: #0000;
+  background: linear-gradient(-90deg, #00dffc00 5px, #0000 0) 0 0,
+    linear-gradient(#000000 0 0) 0 0;
+  background-size: calc(var(--n) * 1ch) 200%;
+  -webkit-background-clip: padding-box, text;
+  background-clip: padding-box, text;
+  background-repeat: no-repeat;
+  animation: b 0.7s infinite steps(1),
+    t calc(var(--n) * 0.1s) steps(var(--n)) forwards;
+}
+
+@keyframes t {
+  from {
+    background-size: 0 200%;
   }
-  
-  @keyframes t{
-    from {background-size:0 200%}
+}
+@keyframes b {
+  50% {
+    background-position: 0 -100%, 0 0;
   }
-  @keyframes b{
-    50% {background-position:0 -100%,0 0}
-  }
-
-.frames{
-    display: flex;
-    justify-content: center;
 }
 
-.name{
-    text-align: center;
-    font-weight: bolder;
+.frames {
+  display: flex;
+  justify-content: center;
 }
 
-.boy{
-    left: 46%;
-    position: fixed;
-    filter: drop-shadow(8px 8px 6px rgba(85, 85, 85, 0.616));
-    bottom: 10px;
-    width: 10vw;
+.name {
+  text-align: center;
+  font-weight: bolder;
 }
 
-.mes{
-    border: 5px solid black;
-    box-shadow: 5px 0px 25px;
-    min-height: 15vh;
-    width: 85vw;
-    background-color:bisque;
-    margin:auto;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 25px;
+.boy {
+  left: 46%;
+  position: fixed;
+  filter: drop-shadow(8px 8px 6px rgba(85, 85, 85, 0.616));
+  bottom: 10px;
+  width: 10vw;
 }
 
-.msg{
-    box-shadow: 5px 0px 25px;
-    border-radius: 25px;
-    margin-top: 10PX;
-    height: 75px;
-    width: 30vw;
-    border: 2px solid black;
-    background-color: beige;
+.mes {
+  border: 5px solid black;
+  box-shadow: 5px 0px 25px;
+  min-height: 15vh;
+  width: 85vw;
+  background-color: bisque;
+  margin: auto;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 25px;
 }
 
-.box{
-    border: 5px solid black;
-    height: 65vh;
-    width: 47vw;
-    justify-content:center;
-    display: flex;
-    background-color: aquamarine;
-    margin: auto;
+.msg {
+  box-shadow: 5px 0px 25px;
+  border-radius: 25px;
+  margin-top: 10px;
+  height: 75px;
+  width: 30vw;
+  border: 2px solid black;
+  background-color: beige;
 }
 
-.storybox{
-    display: flexbox;
+.box {
+  border: 5px solid black;
+  height: 65vh;
+  width: 47vw;
+  justify-content: center;
+  display: flex;
+  background-color: aquamarine;
+  margin: auto;
 }
 
-.mainbox{
-    display: flex;
-    gap: 30px;
+.storybox {
+  display: flexbox;
 }
 
-#b1{
-    background: url("box1.jpg") no-repeat;
-    background-size: cover;
-    background-position: bottom;
+.mainbox {
+  display: flex;
+  gap: 30px;
 }
 
-#b2{
-    background: url("box2.jpg") no-repeat;
-    background-size: cover;
-    background-position: bottom;
+#b1 {
+  background: url("box1.jpg") no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
-.forestS2{
-    display: flex;
-    gap: 25px;
+#b2 {
+  background: url("box2.jpg") no-repeat;
+  background-size: cover;
+  background-position: bottom;
 }
 
-.villageS2{
-    display: flex;
-    gap: 25px;
+.forestS2 {
+  display: flex;
+  gap: 25px;
 }
 
-.guide{
-    display: none;
-    filter: drop-shadow(8px 8px 6px rgba(85, 85, 85, 0.616));
+.villageS2 {
+  display: flex;
+  gap: 25px;
 }
 
-.char{
-    display: flex;
-    /* width: 100%; */
+.guide {
+  display: none;
+  filter: drop-shadow(8px 8px 6px rgba(85, 85, 85, 0.616));
 }
 
-.coins{
-    display: none;
+.char {
+  display: flex;
+  /* width: 100%; */
 }
 
-#f1, #f2{
-    display: none;
+.coins {
+  display: none;
 }
 
-.ghost{
-    display: none;
+#f1,
+#f2 {
+  display: none;
 }
 
-#f11, #f12{
-    display: none;
+.ghost {
+  display: none;
 }
 
+#f11,
+#f12 {
+  display: none;
+}
