@@ -52,8 +52,6 @@ body{
     border: 5px solid black;
     box-shadow: 5px 0px 25px;
     min-height: 15vh;
-    /* display: flex; */
-    /* justify-content: center; */
     width: 85vw;
     background-color:bisque;
     margin:auto;
