@@ -9,25 +9,25 @@ body{
     background-repeat: no-repeat;
 }
 
-.type{
-    font-family: monospace;
+.type {
     color:#0000;
     background:
-      linear-gradient(-90deg,#000000 5px,#0000 0) 10px 0,
-      linear-gradient(#000000 0 0) 0 0;
+      linear-gradient(-90deg,#00DFFC 5px,#0000 0) 10px 0,
+      linear-gradient(#00DFFC 0 0) 0 0;
     background-size:calc(var(--n)*1ch) 200%;
     -webkit-background-clip:padding-box,text;
     background-clip:padding-box,text;
     background-repeat:no-repeat;
     animation: 
-      b .7s infinite steps(1),   
-      t calc(var(--n)*.3s) steps(var(--n)) forwards;
+     b .7s infinite steps(1),   
+     t calc(var(--n)*.1s) steps(var(--n)) forwards;
   }
+  
   @keyframes t{
     from {background-size:0 200%}
   }
   @keyframes b{
-    100% {background-position:0 -100%,0 0}
+    50% {background-position:0 -100%,0 0}
   }
 
 .frames{
@@ -52,8 +52,8 @@ body{
     border: 5px solid black;
     box-shadow: 5px 0px 25px;
     min-height: 15vh;
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     width: 85vw;
     background-color:bisque;
     margin:auto;
