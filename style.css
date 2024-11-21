@@ -10,6 +10,9 @@ body{
 }
 
 .type {
+    padding: 15px;
+    font-size: 20px;
+    overflow-x: hidden;
     color:#0000;
     background:
       linear-gradient(-90deg,#00dffc00 5px,#0000 0) 0 0,
