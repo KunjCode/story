@@ -13,7 +13,7 @@ body{
     color:#0000;
     background:
       linear-gradient(-90deg,#00DFFC 5px,#0000 0) 10px 0,
-      linear-gradient(#00DFFC 0 0) 0 0;
+      linear-gradient(#000000 0 0) 0 0;
     background-size:calc(var(--n)*1ch) 200%;
     -webkit-background-clip:padding-box,text;
     background-clip:padding-box,text;
