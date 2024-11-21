@@ -66,15 +66,6 @@ function msg1(){
         
         document.getElementById('Guide').parentElement.style.display = "flex";
 
-        // document.getElementsByClassNamee('guide').style.left = "55%";
-        // document.getElementsByClassNamee('guide').style.bottom = "0";
-        // document.getElementsByClassNamee('guide').style.position = "absolute"; 
-    
-        // document.getElementsByClassNamee('guide').parentElement.style.display = "block"; 
-        // document.getElementsByClassNamee('guide').style.display = "flex";
-        // document.getElementsByClassNamee('guide').style.position = "absolute";
-        // document..style.width = "300px";
-
         
         document.getElementById('Guide').style.width = "20vw";
         document.getElementById('Guide').style.display = "flex";
