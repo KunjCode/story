@@ -19,7 +19,7 @@ function msg1(){
     
     
     
-    document.getElementById('mainmsg').style.textAlign = "center";
+    // document.getElementById('mainmsg').style.textAlign = "center";
     document.getElementById('mainmsg').style.minHeight = "12vh";
     document.getElementById('mainmsg').style.width = "85vw";
     document.getElementById('mainmsg').style.padding = "10px";
@@ -58,9 +58,8 @@ function msg1(){
     
     
     document.getElementById('Boy').addEventListener("click", () => {
-        document.getElementById('mainmsg').style.display = "flex";
-        message();
-        // document.getElementById('mainmsg').innerText = "wow";
+        document.getElementById('mainmsg').style.display = "block";
+        document.getElementById('mainmsg').innerHTML = "wow";
         document.getElementById('tip1').style.display = "none";
         document.getElementById('Boy').style.display = "none";
         document.getElementById('Boy1').style.display = "block";
@@ -450,56 +449,56 @@ function msg1(){
     }
 
 
-    function message(){
-        // Define the CSS as a string
-        const css = `
-            .type {
-            padding: 15px;
-            font-size: 20px;
-            overflow-x: hidden;
-            color: #0000;
-            background: linear-gradient(-90deg, #00dffc00 5px, #0000 0) 0 0,
-                linear-gradient(#000000 0 0) 0 0;
-            background-size: calc(var(--n) * 1ch) 200%;
-            -webkit-background-clip: padding-box, text;
-            background-clip: padding-box, text;
-            background-repeat: no-repeat;
-            animation: b 0.7s infinite steps(1),
-                t calc(var(--n) * 0.1s) steps(var(--n)) forwards;
-            }
+    // function message(){
+    //     // Define the CSS as a string
+    //     const css = `
+    //         .type {
+    //         padding: 15px;
+    //         font-size: 20px;
+    //         overflow-x: hidden;
+    //         color: #0000;
+    //         background: linear-gradient(-90deg, #00dffc00 5px, #0000 0) 0 0,
+    //             linear-gradient(#000000 0 0) 0 0;
+    //         background-size: calc(var(--n) * 1ch) 200%;
+    //         -webkit-background-clip: padding-box, text;
+    //         background-clip: padding-box, text;
+    //         background-repeat: no-repeat;
+    //         animation: b 0.7s infinite steps(1),
+    //             t calc(var(--n) * 0.1s) steps(var(--n)) forwards;
+    //         }
 
-            @keyframes t {
-            from {
-                background-size: 0 200%;
-            }
-            }
-            @keyframes b {
-            50% {
-                background-position: 0 -100%, 0 0;
-            }
-            }
-        `;
+    //         @keyframes t {
+    //         from {
+    //             background-size: 0 200%;
+    //         }
+    //         }
+    //         @keyframes b {
+    //         50% {
+    //             background-position: 0 -100%, 0 0;
+    //         }
+    //         }
+    //     `;
 
-        // Create a <style> element
-        const style = document.createElement("style");
-        style.textContent = css;
+    //     // Create a <style> element
+    //     const style = document.createElement("style");
+    //     style.textContent = css;
 
-        // Append the <style> to the <head>
-        document.head.appendChild(style);
+    //     // Append the <style> to the <head>
+    //     document.head.appendChild(style);
 
-        // Apply the class to an element dynamically
-        const element = document.createElement("div");
-        element.className = "type";
-        element.style.setProperty('--n', '10'); // Example setting for --n
-        element.textContent = "Dynamic Styled Text";
+    //     // Apply the class to an element dynamically
+    //     const element = document.createElement("div");
+    //     element.className = "type";
+    //     element.style.setProperty('--n', '10'); // Example setting for --n
+    //     element.textContent = "Dynamic Styled Text";
         
-        // Append the element to the body
-        document.body.appendChild(element);
+    //     // Append the element to the body
+    //     document.body.appendChild(element);
 
-        // const mainmsg = document.getElementById('mainmsg');
+    //     // const mainmsg = document.getElementById('mainmsg');
         
+    // }
 
-    }
     
 }
 
