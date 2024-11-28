@@ -60,6 +60,7 @@ function msg1(){
     document.getElementById('Boy').addEventListener("click", () => {
         document.getElementById('mainmsg').style.display = "block";
         document.getElementById('mainmsg').innerHTML = "wow";
+        message();
         document.getElementById('tip1').style.display = "none";
         document.getElementById('Boy').style.display = "none";
         document.getElementById('Boy1').style.display = "block";
@@ -449,55 +450,133 @@ function msg1(){
     }
 
 
-    // function message(){
-    //     // Define the CSS as a string
-    //     const css = `
-    //         .type {
-    //         padding: 15px;
-    //         font-size: 20px;
-    //         overflow-x: hidden;
-    //         color: #0000;
-    //         background: linear-gradient(-90deg, #00dffc00 5px, #0000 0) 0 0,
-    //             linear-gradient(#000000 0 0) 0 0;
-    //         background-size: calc(var(--n) * 1ch) 200%;
-    //         -webkit-background-clip: padding-box, text;
-    //         background-clip: padding-box, text;
-    //         background-repeat: no-repeat;
-    //         animation: b 0.7s infinite steps(1),
-    //             t calc(var(--n) * 0.1s) steps(var(--n)) forwards;
-    //         }
+    function message(){
+        // Define the CSS as a string
+        // const css = `
+        //     .type {
+        //     padding: 15px;
+        //     font-size: 20px;
+        //     overflow-x: hidden;
+        //     color: #0000;
+        //     background: linear-gradient(-90deg, #00dffc00 5px, #0000 0) 0 0,
+        //         linear-gradient(#000000 0 0) 0 0;
+        //     background-size: calc(var(--n) * 1ch) 200%;
+        //     -webkit-background-clip: padding-box, text;
+        //     background-clip: padding-box, text;
+        //     background-repeat: no-repeat;
+        //     animation: b 0.7s infinite steps(1),
+        //         t calc(var(--n) * 0.1s) steps(var(--n)) forwards;
+        //     }
 
-    //         @keyframes t {
-    //         from {
-    //             background-size: 0 200%;
-    //         }
-    //         }
-    //         @keyframes b {
-    //         50% {
-    //             background-position: 0 -100%, 0 0;
-    //         }
-    //         }
-    //     `;
+        //     @keyframes t {
+        //     from {
+        //         background-size: 0 200%;
+        //     }
+        //     }
+        //     @keyframes b {
+        //     50% {
+        //         background-position: 0 -100%, 0 0;
+        //     }
+        //     }
+        // `;
+        // const style = document.createElement("style");
+        // style.textContent = css;
 
-    //     // Create a <style> element
-    //     const style = document.createElement("style");
-    //     style.textContent = css;
+        // document.head.appendChild(style);
 
-    //     // Append the <style> to the <head>
-    //     document.head.appendChild(style);
+        // // const element = document.getElementById("mainmsg");
+        // const element = document.getElementById("mainmsg");
 
-    //     // Apply the class to an element dynamically
-    //     const element = document.createElement("div");
-    //     element.className = "type";
-    //     element.style.setProperty('--n', '10'); // Example setting for --n
-    //     element.textContent = "Dynamic Styled Text";
+        // element.style.setProperty('--n', '10');
+
+        // // element.className = "type";
+
+        // document.getElementById("mainmsg").innerHTML = "Both the Kalabhavan and The Baroda College went through various stages of development from 1894 to 1949,leading to the formation of The Maharaja Sayajirao University of Baroda in 1949.Then The M.S. University took over the charge of Kalabhavan in 1949, which was basically Arts and Crafts School and then to the Faculty of Technology and Engineering.Primarily the Faculty of Technology & Engineering was offering both the Diploma and the higher Degree courses in the above mentioned branches of engineering from 1949 and onwards.";
+
+
+
+
+
+        // Define the CSS as a string
+        const css = `
+            .type {
+            padding: 15px;
+            font-size: 20px;
+            overflow-x: hidden;
+            color: #0000;
+            background: linear-gradient(-90deg, #00dffc00 5px, #0000 0) 0 0,
+                linear-gradient(#000000 0 0) 0 0;
+            background-size: calc(var(--n) * 1ch) 200%;
+            -webkit-background-clip: padding-box, text;
+            background-clip: padding-box, text;
+            background-repeat: no-repeat;
+            animation: b 0.7s infinite steps(1),
+                t calc(var(--n) * 0.1s) steps(var(--n)) forwards;
+            }
+
+            @keyframes t {
+            from {
+                background-size: 0 200%;
+            }
+            }
+            @keyframes b {
+            50% {
+                background-position: 0 -100%, 0 0;
+            }
+            }
+        `;
+
+        // Create a <style> element
+        const style = document.createElement("style");
+        style.textContent = css;
+
+        // Append the <style> to the <head>
+        document.head.appendChild(style);
+
+        // Select the parent element with ID 'mainmsg'
+        const mainMsg = document.getElementById("mainmsg");
+        if (mainMsg) {
+            // Find the child with class 'type'
+            const typeElement = mainMsg.querySelector('.type');
+            if (typeElement) {
+            typeElement.style.setProperty('--n', '10'); // Example setting for --n
+            typeElement.textContent = "Dynamic Styled Text in Existing Element"; // Set dynamic text
+            } else {
+            console.warn("No element with class 'type' found inside #mainmsg.");
+            }
+        } else {
+            console.warn("Element with ID 'mainmsg' not found.");
+        }
         
-    //     // Append the element to the body
-    //     document.body.appendChild(element);
 
-    //     // const mainmsg = document.getElementById('mainmsg');
+
+
+
+
+
+
+
+
+        // // Create a <style> element
+        // const style = document.createElement("style");
+        // style.textContent = css;
+
+        // // Append the <style> to the <head>
+        // // document.head.appendChild(style);
+
+        // // Apply the class to an element dynamically
+        // const element = document.createElement("div");
+
+        // element.className = "type";
+        // element.style.setProperty('--n', '10'); // Example setting for --n
+        // element.textContent = "Both the Kalabhavan and The Baroda College went through various stages of development from 1894 to 1949,leading to the formation of The Maharaja Sayajirao University of Baroda in 1949.Then The M.S. University took over the charge of Kalabhavan in 1949, which was basically Arts and Crafts School and developed it first in to The Polytechnic, and then to the Faculty of Technology and Engineering. Primarily Faculty of Technology & Engineering was offering both the Diploma and the higher Degree courses in the above mentioned branches of engineering from 1949 and onwards.";
         
-    // }
+        // // Append the element to the body
+        // document.body.appendChild(element);
+
+        // const mainmsg = document.getElementById('mainmsg');
+        
+    }
 
     
 }
