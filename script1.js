@@ -9,6 +9,8 @@ function msg1(){
     var Ghost1 = document.getElementById('Ghost1');
     var tip2 = document.getElementById('tip2');
 
+    var a = 1;
+
 
 
     document.getElementById('Boy1').style.display = "none";
@@ -452,52 +454,6 @@ function msg1(){
 
     function message(){
         // Define the CSS as a string
-        // const css = `
-        //     .type {
-        //     padding: 15px;
-        //     font-size: 20px;
-        //     overflow-x: hidden;
-        //     color: #0000;
-        //     background: linear-gradient(-90deg, #00dffc00 5px, #0000 0) 0 0,
-        //         linear-gradient(#000000 0 0) 0 0;
-        //     background-size: calc(var(--n) * 1ch) 200%;
-        //     -webkit-background-clip: padding-box, text;
-        //     background-clip: padding-box, text;
-        //     background-repeat: no-repeat;
-        //     animation: b 0.7s infinite steps(1),
-        //         t calc(var(--n) * 0.1s) steps(var(--n)) forwards;
-        //     }
-
-        //     @keyframes t {
-        //     from {
-        //         background-size: 0 200%;
-        //     }
-        //     }
-        //     @keyframes b {
-        //     50% {
-        //         background-position: 0 -100%, 0 0;
-        //     }
-        //     }
-        // `;
-        // const style = document.createElement("style");
-        // style.textContent = css;
-
-        // document.head.appendChild(style);
-
-        // // const element = document.getElementById("mainmsg");
-        // const element = document.getElementById("mainmsg");
-
-        // element.style.setProperty('--n', '10');
-
-        // // element.className = "type";
-
-        // document.getElementById("mainmsg").innerHTML = "Both the Kalabhavan and The Baroda College went through various stages of development from 1894 to 1949,leading to the formation of The Maharaja Sayajirao University of Baroda in 1949.Then The M.S. University took over the charge of Kalabhavan in 1949, which was basically Arts and Crafts School and then to the Faculty of Technology and Engineering.Primarily the Faculty of Technology & Engineering was offering both the Diploma and the higher Degree courses in the above mentioned branches of engineering from 1949 and onwards.";
-
-
-
-
-
-        // Define the CSS as a string
         const css = `
             .type {
             padding: 15px;
@@ -525,28 +481,75 @@ function msg1(){
             }
             }
         `;
-
-        // Create a <style> element
         const style = document.createElement("style");
         style.textContent = css;
 
-        // Append the <style> to the <head>
-        document.head.appendChild(style);
+        document.getElementById("mainmsg").appendChild(style);
 
-        // Select the parent element with ID 'mainmsg'
-        const mainMsg = document.getElementById("mainmsg");
-        if (mainMsg) {
-            // Find the child with class 'type'
-            const typeElement = mainMsg.querySelector('.type');
-            if (typeElement) {
-            typeElement.style.setProperty('--n', '10'); // Example setting for --n
-            typeElement.textContent = "Dynamic Styled Text in Existing Element"; // Set dynamic text
-            } else {
-            console.warn("No element with class 'type' found inside #mainmsg.");
-            }
-        } else {
-            console.warn("Element with ID 'mainmsg' not found.");
-        }
+        // const element = document.getElementById("mainmsg");
+        const element = document.createElement("div");
+
+        element.style.setProperty('--n', '10');
+
+        element.className = "type";
+
+        document.getElementById("mainmsg").innerHTML = "Both the Kalabhavan and The Baroda College went through various stages of development from 1894 to 1949,leading to the formation of The Maharaja Sayajirao University of Baroda in 1949.Then The M.S. University took over the charge of Kalabhavan in 1949, which was basically Arts and Crafts School and then to the Faculty of Technology and Engineering.Primarily the Faculty of Technology & Engineering was offering both the Diploma and the higher Degree courses in the above mentioned branches of engineering from 1949 and onwards.";
+
+        element.textContent = "Both the Kalabhavan and The Baroda College went through various stages of development from 1894 to 1949,leading to the formation of The Maharaja Sayajirao University of Baroda in 1949.Then The M.S. University took over the charge of Kalabhavan in 1949, which was basically Arts and Crafts School and then to the Faculty of Technology and Engineering.Primarily the Faculty of Technology & Engineering was offering both the Diploma and the higher Degree courses in the above mentioned branches of engineering from 1949 and onwards.";
+
+
+
+
+        // // Define the CSS as a string
+        // const css = `
+        //     .type {
+        //     padding: 15px;
+        //     font-size: 20px;
+        //     overflow-x: hidden;
+        //     color: #0000;
+        //     background: linear-gradient(-90deg, #00dffc00 5px, #0000 0) 0 0,
+        //         linear-gradient(#000000 0 0) 0 0;
+        //     background-size: calc(var(--n) * 1ch) 200%;
+        //     -webkit-background-clip: padding-box, text;
+        //     background-clip: padding-box, text;
+        //     background-repeat: no-repeat;
+        //     animation: b 0.7s infinite steps(1),
+        //         t calc(var(--n) * 0.1s) steps(var(--n)) forwards;
+        //     }
+
+        //     @keyframes t {
+        //     from {
+        //         background-size: 0 200%;
+        //     }
+        //     }
+        //     @keyframes b {
+        //     50% {
+        //         background-position: 0 -100%, 0 0;
+        //     }
+        //     }
+        // `;
+
+        // // Create a <style> element
+        // const style = document.createElement("style");
+        // style.textContent = css;
+
+        // // Append the <style> to the <head>
+        // document.head.appendChild(style);
+
+        // // Select the parent element with ID 'mainmsg'
+        // const mainMsg = document.getElementById("mainmsg");
+        // if (mainMsg) {
+        //     // Find the child with class 'type'
+        //     const typeElement = mainMsg.querySelector('.type');
+        //     if (typeElement) {
+        //     typeElement.style.setProperty('--n', '10'); // Example setting for --n
+        //     typeElement.textContent = "Dynamic Styled Text in Existing Element"; // Set dynamic text
+        //     } else {
+        //     console.warn("No element with class 'type' found inside #mainmsg.");
+        //     }
+        // } else {
+        //     console.warn("Element with ID 'mainmsg' not found.");
+        // }
         
 
 
