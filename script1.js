@@ -9,8 +9,6 @@ function msg1(){
     var Ghost1 = document.getElementById('Ghost1');
     var tip2 = document.getElementById('tip2');
 
-    var a = 1;
-
 
 
     document.getElementById('Boy1').style.display = "none";
